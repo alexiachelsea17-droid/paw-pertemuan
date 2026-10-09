@@ -1,14 +1,16 @@
-import moongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const FakultasSchema = new moongoose.Schema({
-    name :{
-        type : String,
-        required : true,
-        unique : true
-    }
-},{
-    timestamps : true
-})
+const fakultasSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        require: true,
+        unique: true
+    },
+},
+    {
+        timestamps: true,
+    },
+)
 
-const FakultasModel = moongoose.model('Fakultas',FakultasSchema)
-export default FakultasModel
+const fakultasModel = mongoose.model('fakultas',fakultasSchema)
+export default fakultasModel
